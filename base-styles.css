@@ -194,7 +194,7 @@
   border-width:   var(--ui-search-input-border-width);
   padding:        var(--ui-form-input-padding-small-screens);
   height: var(--ui-form-input-height);
-    line-height: var(--ui-form-input-line-height);
+  line-height: var(--ui-form-input-line-height);
 }
 
 /* Forms */
