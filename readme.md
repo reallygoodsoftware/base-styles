@@ -9,7 +9,7 @@
 - A further 5% can be achieved with "add this class to this element when clicked/hovered".
 - Why not build framework level component libraries on top of a common CSS base, rather than every component library author rewriting their CSS from scratch?
 - Said another way, "Base Components for Laravel" is technically already 90% written (in base-styles.css). To finish it off, a Laravel developer would need to figure out the "Laravel Way" to wire up the few components that rely on backend functionality, like modals and toasts. 
-- If you are want to build a component library for your framework, please feel free to use Base Styles as a starting point. 
+- If you want to build a component library for your framework, please feel free to use Base Styles as a starting point. 
 
 ## Existing Integrations
 
@@ -22,8 +22,8 @@
 
 ## TODO
 
-
-- Fix naming conventions for ui-tooltip (break apart the class)
+- Fix naming conventions for ui-tooltip (break apart the class).
+- Add dropdown arrow that rotates on open to ui-select.
 - Reduce the amount of title pairs.
 - Clean up variables for ui-styled-text.
 - Add more variants for modals.
