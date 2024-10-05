@@ -1,13 +1,14 @@
-# Base Styles.css
+# Base Styles
 
 - Base Styles is 1. A CSS only component library and 2. A scaffold for organizing your CSS.
 - This repository houses the library itself. For more info see the [Base Styles Docs](https://base-styles.com).
 
-# Why CSS Only?
+## The Thinking Behind Base Styles
 
 - 90% of commonly needed components can be achieved with CSS alone, and this is growing. 
 - A further 5% can be achieved with "add this class to this element when clicked/hovered".
 - Why not build framework level component libraries on top of a common CSS base, rather than every component library author rewriting their CSS from scratch?
+- Said another way, "Base for Laravel" is technically already 90% written (in base-styles.css). To finish it off, a Laravel developer would need to figure out the "Laravel Way" to wire up the few components that rely on backend functionality, like modals and toasts. 
 
 ## Developing
 - Make changes to `base-styles.css` as you see fit. 
