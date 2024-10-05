@@ -23,13 +23,25 @@ function createNewVersion() {
       return 0;
     });
 
+  if (versionFiles.length === 0) {
+    const newVersion = '0.0.1.css';
+    const newVersionPath = path.join(versionsDir, newVersion);
+    fs.writeFileSync(newVersionPath, baseStylesContent);
+    fs.copyFileSync(newVersionPath, path.join(versionsDir, 'latest.css'));
+    updateChangelog(newVersion, changelogPath);
+    return;
+  }
+
   const latestVersion = versionFiles[0];
   const latestVersionPath = path.join(versionsDir, latestVersion);
   const latestVersionContent = fs.readFileSync(latestVersionPath, 'utf-8');
 
   // Compare base-styles.css with the most recent version
-  if (baseStylesContent === latestVersionContent) {
-    console.log('No changes detected. No new version created.');
+  const baseStylesTrimmed = baseStylesContent.trim();
+  const latestVersionTrimmed = latestVersionContent.trim();
+  
+  if (baseStylesTrimmed === latestVersionTrimmed) {
+    console.log('No changes detected, skipping');
     return;
   }
 
@@ -39,19 +51,20 @@ function createNewVersion() {
   const newVersionPath = path.join(versionsDir, newVersion);
 
   fs.writeFileSync(newVersionPath, baseStylesContent);
-  console.log(`New version created: ${newVersion}`);
 
   // Update latest.css
   fs.copyFileSync(newVersionPath, path.join(versionsDir, 'latest.css'));
-  console.log('latest.css updated');
 
   // Update changelog
+  updateChangelog(newVersion, changelogPath);
+}
+
+function updateChangelog(version, changelogPath) {
   const changelogContent = fs.readFileSync(changelogPath, 'utf-8');
   const currentDate = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
-  const changelogUpdate = `## ${newVersion.replace('.css', '')} (${currentDate})\n\n`;
+  const changelogUpdate = `## ${version.replace('.css', '')} (${currentDate})\n\n`;
 
   fs.writeFileSync(changelogPath, changelogUpdate + changelogContent);
-  console.log('Changelog updated');
 }
 
 createNewVersion();
