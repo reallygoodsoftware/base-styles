@@ -7,8 +7,7 @@
 
 - 90% of commonly needed components can be achieved with CSS alone, and this is growing. 
 - A further 5% can be achieved with "add this class to this element when clicked/hovered".
-- A very small percentage of components require integration with a frontend/backend. 
-- Rather than rewriting the same component CSS for every new framework, why not build framework level component libraries on top of a common CSS base?
+- Why not build framework level component libraries on top of a common CSS base, rather than every component library author rewriting their CSS from scratch?
 
 ## Developing
 - Make changes to `base-styles.css` as you see fit. 
@@ -21,6 +20,7 @@
 
 - Fix naming conventions for ui-tooltip (break apart the class)
 - Reduce the amount of title pairs.
-- Clean up variables for ui-styled-text
-- Add more variants for modals
-- Add CSS nesting polyfill (currently only works in 87% of browsers)
+- Clean up variables for ui-styled-text.
+- Add more variants for modals.
+- Add CSS nesting polyfill (currently only works in 87% of browsers).
+- Use focus-within for floating labels (can be broken with password managers currently).
