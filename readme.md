@@ -1,9 +1,6 @@
 # Base Styles.css
 
-Base Styles is a set of CSS classes that does 3 things: 
-1. Helps you to keep your CSS structured and organized as your product grows.
-2. Helps you to maintain visual consistency across common UI elements.
-3. Gives you lego blocks to compose new features with.
+Base Styles is 1. A CSS only component library and 2. A scaffold for organzing your CSS.
 
 ## How It Works
 
@@ -17,3 +14,10 @@ Import 2 files into your cobebase: Firstly, the core `base-styles.css` file, whi
 ```
 
 This repository houses the library itself. For more info see the [Base Styles Docs](https://base-styles.com).
+
+## TODO
+
+- Fix naming conventions for ui-tooltip (break apart the class)
+- Reduce the amount of title pairs.
+- Clean up variables for ui-styled-text
+- Add more variants for modals
