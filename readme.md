@@ -1,10 +1,10 @@
 # Base Styles.css
 
-Base Styles is 1. A CSS only component library and 2. A scaffold for organzing your CSS.
+Base Styles is 1. A CSS only component library and 2. A scaffold for organizing your CSS.
 
 ## How It Works
 
-`base-styles.css` is just a large, vanilla CSS file, that you can import into your app. 
+`base-styles.css` is just a big vanilla CSS file that you can import into your app. 
 
 Import 2 files into your cobebase: Firstly, the core `base-styles.css` file, which is universal and should not be changed - and secondly, a `base-styles-custom.css` file, which is where you'll put all of your customizations and overrides.
 
